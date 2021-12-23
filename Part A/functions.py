@@ -31,7 +31,7 @@ def helloWorld():
 
 # Import images (here only those with centrioles <- not DAPI)
 #set path to data folder
-path = 'data/'
+path = '../data/'
 #give teh name for the different sub folders
 options = [["RPE1wt_CEP152+GTU88+PCNT_1","DAPI","CEP152","GTU88","PCNT"], #Channel 0 : C0,C1,C2,C3
            ["RPE1wt_CEP63+CETN2+PCNT_1","DAPI","CEP63","CETN2","PCNT"], #Channel 1 : C0,C1,C2,C3
