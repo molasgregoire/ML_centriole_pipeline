@@ -44,7 +44,7 @@ save_name = 'CP110_only_balanced_twice'# the name for the file saved at the end
 ### IMPORTATION OF THE DATA
 print('importing data')
 # import the file containing the positions for each centriole (csv)
-data = pd.read_csv("data/annotations.csv")
+data = pd.read_csv("../data/annotations.csv")
 
 # import images + the corresponding names
 #images,names = loadAllCtrImages(channels=channels, format_="tif", path = path)
@@ -52,9 +52,9 @@ data = pd.read_csv("data/annotations.csv")
 ###
 ## we load the 25 but only train on 20 to test on the 5 remaining
 # Load all CEP63 (or other folder) images
-#path = 'data/RPE1wt_CEP63+CETN2+PCNT_1/CEP63/tif'
+#path = '../data/RPE1wt_CEP63+CETN2+PCNT_1/CEP63/tif'
 # CP110
-path = 'data/RPE1wt_CP110+GTU88+PCNT_2/CP110/tif'
+path = '../data/RPE1wt_CP110+GTU88+PCNT_2/CP110/tif'
 
 images = []
 names = [f for f in listdir(path) if isfile(join(path, f))]

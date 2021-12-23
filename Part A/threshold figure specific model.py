@@ -76,14 +76,14 @@ model = torch.load(path_to_model)
 #%%
 #load data
 
-data = pd.read_csv("data/annotations.csv")
+data = pd.read_csv("../data/annotations.csv")
 
 #%%
 # load images
 # Load all CEP63 (or other folder) images
-#path = 'data/RPE1wt_CEP63+CETN2+PCNT_1/CEP63/tif'
+#path = '../data/RPE1wt_CEP63+CETN2+PCNT_1/CEP63/tif'
 # CP110
-path = 'data/RPE1wt_CP110+GTU88+PCNT_2/CP110/tif'
+path = '../data/RPE1wt_CP110+GTU88+PCNT_2/CP110/tif'
 
 images = []
 names = [f for f in listdir(path) if isfile(join(path, f))]

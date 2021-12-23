@@ -274,7 +274,7 @@ models_to_test = [
 ### IMPORTATION OF THE DATA
 print('importing data')
 # import the file containing the positions for each centriole (csv)
-data = pd.read_csv("data/annotations.csv")
+data = pd.read_csv("../data/annotations.csv")
 
 # import images + the corresponding names
 images,names = loadAllCtrImages(channels=[0,], format_="tif", path = path)
