@@ -21,9 +21,9 @@ This folder contains the functions, tools, and models produced for this project 
 
 #### file description
 jupyter notebooks :
-- Train a model : this notebook aim to train a new model with a certain set of image and parameter customizable
+- Train_a_model : this notebook aim to train a new model with a certain set of image and parameter customizable
 
-- perform predictions : this notebook aim to produce a csv file containing the position of the centrioles predicted on images according to a model
+- perform_predictions : this notebook aim to produce a csv file containing the position of the centrioles predicted on images according to a model
 The resulting csv file has as columns the names of the image, the detected centrioles coordinates x and y, and the score associated to the prediction
 
 python files :
@@ -35,8 +35,8 @@ python files :
 - train_model_final_specific : this file aim to train a model using the final training process developped
 the loading of image is made to load the image within one folder, but it is easily editable
 
-- threshold figure specific model : this file aim to plot figures that represent the score (precision,f1,recall) for a certain model and varying the threshold to fitler prediction
-this allow to observe th behavior of the results and chose the best threshold wanted
+- threshold_figure_specific_model : this file aim to plot figures that represent the score (precision,f1,recall) for a certain model and varying the threshold to fitler prediction
+this allow to observe the behavior of the results and chose the best threshold wanted
 
 ## Part B : Nucleus detection
 
