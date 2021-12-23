@@ -3,9 +3,20 @@ This github contains the pipeline to detect centrioles and nuclei in fluorescenc
 
 ### Repo organization :
 
+In the main page you will find:
+
+## `data`:
+* RPE1wt_CEP152+GTU88+PCNT_1: (goes by CEP152 in some notebook)
+* RPE1wt_CEP63+CETN2+PCNT_1: (goes by CEP63 in some notebook)
+* RPE1wt_CP110+GTU88+PCNT_2: (goes by CP110 in some notebook)
+* DAPI: Gathered 75 DAPI images (from CEP152,CEP63,CP110)
+* annotations.csv: x,y location of centroids
+
+## `00_Explore.ipynb`: 
+This notebook allows you to get familiar with the provided dataset.
 
 
-## Part A : Centriole detection 
+## `Part A : Centriole detection`: 
 This folder contains the functions, tools, and models produced for this project on detecting centriole in fluorescence images
 
 #### Required libraries for this part
@@ -48,9 +59,26 @@ models description :
 - model_full -> this model is was produced with an older version of the code by training on ALL the images
 - pixel14_c0 -> this model is was produced with an older version of the code by training on all the images in RPE1wt_CEP63+CETN2+PCNT_1
 
-## Part B : Nucleus detection
+## `Part B : Nucleus detection`
+In this folder you will find 4 notebook:
+* 01_StardistExtraction.ipynb: Explain how preprocessed data of nucleus is obtained from Stardist.
+* 02_StardistLabeling.ipynb: Tool to load DAPI images (which explains the `DAPI` folder in `data`), and preprocess them through Stardist. After that, the user can label them, verify the recorded labeling, and export the result as arrays. The export location is `nuc_labeling`. Is this folder you will find:
+  * nucleus, labels, tags: Data extracted from Stardist without attention preprocessing.
+  * nucleus1, labels1, tags1: Data extracted from Stardist with attention preprocessing.  
+ 
+  PS: An error is displayed after cell 10, this is because we did not label all requested data again before to submit this repo. But everything works fine.
+* 03_Classifier.ipynb: Further processing of extrated data: Data augmentation, standardization. Definition of the Classifier model, training, and export of it. (`modelLast`)
+* 04_NucleusPrediciton.ipynb: Implementation of our model and comparison of output with "raw Stardist".
 
 #### Required libraries for this part
+* numpy
+* matplotlib
+* opencv
+* seaborn
+* skimage
+* imgaug
+* pytorch
+* Stardist:[Installation procedure](https://github.com/stardist/stardist)
 
 
 ## Part C : Centrioles-Nucleus association 
