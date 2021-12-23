@@ -84,4 +84,13 @@ In this folder you will find 4 notebook:
 ## Part C : Centrioles-Nucleus association 
 
 #### Required libraries for this part
+All previous libraries are required to run this part
+
+Currently only work with CEP63 prediction present as a csv file in the part C directory
+
+AssociationTask.ipynb : Jupyter file to execute task C, modify path and image to analyze accordingly
+AssociationTask.py : function files that defines models & functions
+modelLast : NN model file loaded using pytorch to run Nucleus detection & clssification
+
+
 
